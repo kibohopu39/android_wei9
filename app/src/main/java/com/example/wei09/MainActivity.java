@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -17,6 +18,7 @@ import java.io.InputStreamReader;
 public class MainActivity extends AppCompatActivity {
     private SharedPreferences sp;
     private SharedPreferences.Editor editor;//Editor 為 sp 的內部類別
+    private Button test5, test6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             fin.close();
-            Toast.makeText(this, sb, Toast.LENGTH_SHORT).show();
+
 
         } catch (Exception e) {
             Log.v("bug", e.toString());
@@ -70,6 +72,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void test56(View view) {
-
+        Button btn = (Button)view;
+        Log.v("brad", btn.getText().toString());
+        if (view == test5){
+            Log.v("brad", "test5");
+        }else if (view == test6){
+            Log.v("brad", "test6");
+        }
     }
 }
