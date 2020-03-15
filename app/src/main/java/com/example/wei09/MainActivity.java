@@ -69,4 +69,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "failure", Toast.LENGTH_SHORT).show();
         }
     }
+    public void test56(View view) {
+
+    }
 }
